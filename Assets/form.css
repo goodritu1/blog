@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +12,8 @@
 html, body {
     height:100%;
 }
+
+
 h1 {
     color: white;
     margin: 20px;
@@ -31,25 +39,28 @@ img {
     height: 100%;
 background-position-y: 80px;;
 }
+
 input {
     outline: none;
     padding: 5px;
     border-radius: 2px;
     
 }
+
 button {
     border: none;
     color: orange;
     padding: 15px 32px;
     text-align: center;
-    /* display: inline-block; */
-    font-size: 16px;
+    display: inline-block;
+    /* /* /* font-size: 16px; */
     margin: 0px 20px;
     cursor: pointer;
     float: right;
-    
+ } 
+  
 
-}
+
 
 /* #div-left {
     background: url("blog.jpeg") no-repeat;
@@ -80,10 +91,10 @@ button {
 }
 
 
-.form-group {
+/* #form-group {
 display: flex;
 flex-direction: column;
-}
+} */
 
 .form-field {
     display: flex;
@@ -97,7 +108,25 @@ flex-direction: column;
     border-color: black;
     
 }
-#form-up {
+input{
+    background-color: #f1f3f4;
+    border-radius: 2px;
+    border-width: 0;
+    font-size: 1em;
+    height: 45px;
+    line-height: 20px;
+    margin: 0;
+    margin-top: 10px;
+    max-width: 100%;
+    padding: 8px 8px 8px 8px;
+    transition-delay: 0s, 0s;
+    transition-duration: 0.2s, 0.2s;
+    transition-property: background-color, color;
+    transition-timing-function: ease, ease;
+    vertical-align: middle;
+    width: 100%;
+}
+h1 {
     display: flex;
     align-items: center;
     margin: 5%;

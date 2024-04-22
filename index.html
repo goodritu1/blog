@@ -10,32 +10,32 @@
     <body>
 
         <div id="form-container">
-            <div id="div-left">
+            <div id="image-left">
                 <img src = "blog.jpeg" alt="lens">
             </div>
             <div id="form-section">
-                <div id="form-up"> <h1>Pour your thoughts</h1> </div>
-        
                 
-                <div>
-                <form>
-                    <div class ="form-group">
+                 <h1>Pour your thoughts</h1> 
+
+                <form method ="POST">
+                    <!-- <div id ="form-group"> -->
                       <div class="form-field">
-                        <input type = "text" placeholder="Username">
+                        
+                        <input type = "text" placeholder="Username" id =" username" name ="username">
                       </div>
 
                         <div class= "form-field">
-                         <input type =" text" placeholder=" title">
+                         <input type =" text" placeholder=" Title" id = "title" name = "title">
                         </div>
 
                         <div class ="form-field-content">
-                            <input type =" text" placeholder=" Content" style = "height :100px">
+                            <input type =" text" placeholder= "Content" id = "content" name = "Content" style = "height :100px">
                         </div>
-                     </div>
+                     <!-- </div> -->
                 
                 </form>
-                </div>
-                <button type ="button"> Submit </button>
+                
+                 <button id="submit">Submit </button> 
                  
             </div>
         </div>
