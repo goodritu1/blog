@@ -1,69 +1,59 @@
-//get the form elements
+// //get the form elements
 
 const usernameInput = document.getElementById('username');
 const titleInput = document.getElementById('title');
 const contentInput = document.getElementById('content');
 const submitButton = document.getElementById('submit');
 
-// save all the value in one object
 
-// const saveForm={
-//     usernameInput:  usernameInput.value,
-//     titleInput: titleInput.value,
-//     contentInput: contentInput.value,
-
-// }
-
-// console.log (saveForm);
-
-
-
-submitButton.addEventListener ('click', function (event){
-    // saveForm.usernameInput= usernameInput.value;
-
+let formInfo = [];
+submitButton.addEventListener('click', function (event) {
+formInfo = JSON.parse(localStorage.getItem('formInfo')) || [];
     event.preventDefault();
-    // saveForm();
-    // clearForm();
+
     const saveFormInfo = {
         usernameInput: usernameInput.value,
         titleInput: titleInput.value,
         contentInput: contentInput.value,
-        
     };
-    localStorage.setItem('saveform',JSON.stringify(saveFormInfo));
+
+    
+    formInfo.push(saveFormInfo);
+    localStorage.setItem('formInfo', JSON.stringify(formInfo));
+    console.log(formInfo)
+
+    //   return saveFormInfo;
     clearForm();
+    window.location="blog.html";
 });
 
-// function saveForm() {
-//     // saving data from form as an object
-  
-// // alert("hello");
-// // // store the form data in local storage
-// // localStorage.setItem('saveFormInfo', JSON.stringify(saveFormInfo));
-// return saveFormInfo;
 
-// }
-function clearForm (){
-usernameInput.value ="";
-titleInput.value="";
-contentInput.value="";
+
+function clearForm() {
+    usernameInput.value = "";
+    titleInput.value = "";
+    contentInput.value = "";
 
 }
 
+// javascript for toggle switch
 
-//     const formInfo1= JSON.parse(localStorage.getItem('saveFormInfo'));
-//     console.log(formInfo1);
-    
+const themeSwitcher = document.querySelector('#theme-switcher');
+const container = document.querySelector('.container');
 
+// Set default mode to light
+let mode = 'light';
 
-
-
-// // function init() {
-// //     renderLastForm();
-// // }
-// // init();
-
-
-
-
-
+// Listen for a click event on toggle switch
+themeSwitcher.addEventListener('click', function () {
+  // If mode is dark, apply light background
+  if (mode === 'dark') {
+    mode = 'light';
+    container.setAttribute('class', 'light');
+  }
+  // If mode is light, apply dark background
+  else {
+    mode = 'dark';
+    container.setAttribute('class', 'dark');
+  }
+});

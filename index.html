@@ -8,38 +8,53 @@
         <link rel="stylesheet" href="Assets/form.css" />
     </head>
     <body>
+        <div class="container">
 
-        <div id="form-container">
-            <div id="image-left">
-                <img src="blog.jpeg" alt="lens">
-            </div>
-            <div id="form-section">
+            <header>
+                <h1> HI my name is Ritu</h1>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switcher">
+                    <span class="slider round"></span>
+                </label>
 
-                <h1>Pour your thoughts</h1>
+            </header>
+<main>
+            <div class="card">
+                <div id="image-left">
+                    <img src="blog.jpeg" alt="lens">
+                </div>
+                <div id="form-section">
 
-                <form>
+                    <h1>Pour your thoughts</h1>
 
-                    <div class="form-field">
+                    <form action="blog.html">
 
-                        <input type="text" placeholder="Username" id="username"
-                            name="username">
-                    </div>
+                        <div class="form-field">
 
-                    <div class="form-field">
-                        <input type=" text" placeholder=" Title" id="title"
-                            name="title">
-                    </div>
+                            <input type="text" placeholder="Username"
+                                id="username"
+                                name="username">
+                        </div>
 
-                    <div class="form-field-content">
-                        <input type=" text" placeholder="Content" id="content"
-                            name="content" style="height :100px">
-                    </div>
+                        <div class="form-field">
+                            <input type=" text" placeholder=" Title" id="title"
+                                name="title">
+                        </div>
 
-                    <button id="submit">Submit </button>
-                </form>
+                        <div class="form-field-content">
+                            <input type=" text" placeholder="Content"
+                                id="content"
+                                name="content" style="height :100px">
+                        </div>
 
+                        <button id="submit">Submit </button>
+                    </form>
+
+                </div>
             </div>
         </div>
+    </main>
+</body>
         <script src="Assets/form.js"></script>
 
     </body>
