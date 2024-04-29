@@ -1,38 +1,46 @@
-// //get the form elements
+// //get the form inputs
 
 const usernameInput = document.getElementById('username');
 const titleInput = document.getElementById('title');
 const contentInput = document.getElementById('content');
 const submitButton = document.getElementById('submit');
-console.log (usernameInput);
+console.log(usernameInput);
 
 let formInfo = [];
 submitButton.addEventListener('click', function (event) {
-formInfo = JSON.parse(localStorage.getItem('formInfo')) || [];
+  if (usernameInput.value === "" || titleInput.value === "" || contentInput.value === "") {
+    alert("Please fill in all the fields");
     event.preventDefault();
+  } else{
 
-    const saveFormInfo = {
-        usernameInput: usernameInput.value,
-        titleInput: titleInput.value,
-        contentInput: contentInput.value,
-    };
+  formInfo = JSON.parse(localStorage.getItem('formInfo')) || [];
+  event.preventDefault();
 
-    
-    formInfo.push(saveFormInfo);
-    localStorage.setItem('formInfo', JSON.stringify(formInfo));
-    console.log(formInfo)
+  const saveFormInfo = {
+    usernameInput: usernameInput.value,
+    titleInput: titleInput.value,
+    contentInput: contentInput.value,
 
-    //   return saveFormInfo;
-    clearForm();
-    window.location="blog.html";
+  };
+
+
+  formInfo.push(saveFormInfo);
+  localStorage.setItem('formInfo', JSON.stringify(formInfo));
+  console.log(formInfo)
+
+  //   return saveFormInfo;
+  clearForm();
+  window.location = "blog.html";
+}
+
 });
 
 
 
 function clearForm() {
-    usernameInput.value = "";
-    titleInput.value = "";
-    contentInput.value = "";
+  usernameInput.value = "";
+  titleInput.value = "";
+  contentInput.value = "";
 
 }
 
