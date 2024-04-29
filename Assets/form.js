@@ -4,7 +4,7 @@ const usernameInput = document.getElementById('username');
 const titleInput = document.getElementById('title');
 const contentInput = document.getElementById('content');
 const submitButton = document.getElementById('submit');
-
+console.log (usernameInput);
 
 let formInfo = [];
 submitButton.addEventListener('click', function (event) {
