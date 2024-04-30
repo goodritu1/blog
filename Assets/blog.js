@@ -15,12 +15,12 @@ themeSwitcher.addEventListener('click', function () {
   // If mode is dark, apply light background
   if (mode === 'dark') {
     mode = 'light';
-    container.setAttribute('class', 'light');
+    container.setAttribute('class', 'light container');
   }
   // If mode is light, apply dark background
   else {
     mode = 'dark';
-    container.setAttribute('class', 'dark');
+    container.setAttribute('class', 'dark container');
   }
 });
 
